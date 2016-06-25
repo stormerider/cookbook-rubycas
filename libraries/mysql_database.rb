@@ -29,9 +29,11 @@ module Rubycas
       end
 
       def required_client_recipes
-        %w{
-          mysql-chef_gem
-        }
+        mysql_chef_gem 'default' do
+          action :install
+        end
+
+        nil
       end
     end
   end

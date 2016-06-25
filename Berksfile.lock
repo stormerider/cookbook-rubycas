@@ -1,83 +1,74 @@
-{
-  "sources": {
-    "rubycas": {
-      "path": "."
-    },
-    "mysql": {
-      "locked_version": "4.1.2"
-    },
-    "rvm": {
-      "locked_version": "0.9.1",
-      "git": "git://github.com/fnichol/chef-rvm.git",
-      "ref": "0cd320911c1e568cbf2eeac895a5ef06e5821589"
-    },
-    "god": {
-      "locked_version": "1.0.2",
-      "git": "git://github.com/sqm/chef-god.git",
-      "ref": "0bedf09e58e893769b95896ded9aa7d817e56ddc"
-    },
-    "logrotate": {
-      "locked_version": "1.5.0"
-    },
-    "apt": {
-      "locked_version": "2.4.0"
-    },
-    "database": {
-      "locked_version": "2.2.0"
-    },
-    "postgresql": {
-      "locked_version": "3.4.0"
-    },
-    "build-essential": {
-      "locked_version": "2.0.2"
-    },
-    "openssl": {
-      "locked_version": "1.1.0"
-    },
-    "aws": {
-      "locked_version": "2.2.2"
-    },
-    "xfs": {
-      "locked_version": "1.1.0"
-    },
-    "mysql-chef_gem": {
-      "locked_version": "0.0.2"
-    },
-    "nginx": {
-      "locked_version": "2.7.2"
-    },
-    "bluepill": {
-      "locked_version": "2.3.1"
-    },
-    "rsyslog": {
-      "locked_version": "1.12.2"
-    },
-    "ohai": {
-      "locked_version": "2.0.0"
-    },
-    "runit": {
-      "locked_version": "1.5.10"
-    },
-    "yum": {
-      "locked_version": "3.2.0"
-    },
-    "yum-epel": {
-      "locked_version": "0.3.6"
-    },
-    "homebrew": {
-      "locked_version": "1.6.6"
-    },
-    "windows": {
-      "locked_version": "1.31.0"
-    },
-    "chef_handler": {
-      "locked_version": "1.1.6"
-    },
-    "java": {
-      "locked_version": "1.22.0"
-    },
-    "chef_gem": {
-      "locked_version": "0.1.0"
-    }
-  }
-}
+DEPENDENCIES
+  apt
+  god
+    git: git://github.com/sqm/chef-god.git
+    revision: fa761c90a90f66392f2143863d6915414e277da0
+  logrotate
+  mysql (<= 4.1.2)
+  rubycas
+    path: .
+    metadata: true
+  rvm
+    git: git://github.com/fnichol/chef-rvm.git
+    revision: eddd733694a1d3e0872f5692e8dda93aa2752791
+
+GRAPH
+  apt (4.0.1)
+    compat_resource (>= 12.10)
+  build-essential (6.0.0)
+    compat_resource (>= 12.10)
+    mingw (>= 1.1)
+    seven_zip (>= 0.0.0)
+  chef-sugar (3.3.0)
+  chef_gem (0.1.0)
+  chef_handler (1.4.0)
+  compat_resource (12.10.6)
+  database (5.1.2)
+    postgresql (>= 1.0.0)
+  god (1.0.3)
+    runit (>= 0.0.0)
+  java (1.39.0)
+    apt (>= 0.0.0)
+  logrotate (1.9.2)
+  mingw (1.2.2)
+    compat_resource (>= 0.0.0)
+    seven_zip (>= 0.0.0)
+  mysql (3.0.4)
+    build-essential (> 1.1.0)
+    openssl (>= 0.0.0)
+  mysql-chef_gem (1.0.0)
+    build-essential (>= 0.0.0)
+  nginx (1.8.0)
+    apt (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    ohai (>= 1.1.4)
+    runit (>= 0.0.0)
+    yum (>= 0.0.0)
+  ohai (4.1.1)
+    compat_resource (>= 12.10)
+  openssl (4.4.0)
+    chef-sugar (>= 3.1.1)
+  packagecloud (0.2.3)
+  postgresql (4.0.6)
+    apt (>= 1.9.0)
+    build-essential (>= 0.0.0)
+    openssl (~> 4.0)
+  rubycas (0.7.2)
+    database (>= 0.0.0)
+    god (>= 0.0.0)
+    logrotate (>= 0.0.0)
+    mysql (<= 4.1.2)
+    mysql-chef_gem (>= 0.0.0)
+    nginx (>= 0.0.0)
+    postgresql (>= 0.0.0)
+    rvm (>= 0.0.0)
+  runit (1.7.8)
+    packagecloud (>= 0.0.0)
+  rvm (0.10.1)
+    chef_gem (>= 0.0.0)
+    java (>= 0.0.0)
+  seven_zip (2.0.1)
+    windows (>= 1.2.2)
+  windows (1.44.0)
+    chef_handler (>= 0.0.0)
+  yum (3.11.0)
