@@ -33,7 +33,7 @@ module Rubycas
           action :install
         end
 
-        nil
+        %w()
       end
     end
   end

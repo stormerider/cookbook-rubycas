@@ -53,7 +53,7 @@ GRAPH
     apt (>= 1.9.0)
     build-essential (>= 0.0.0)
     openssl (~> 4.0)
-  rubycas (0.7.2)
+  rubycas (0.7.3)
     database (>= 0.0.0)
     god (>= 0.0.0)
     logrotate (>= 0.0.0)
